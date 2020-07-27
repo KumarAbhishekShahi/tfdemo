@@ -41,7 +41,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Azure for Students (c4b8ac58-e4e0-438d-a04e-30604e28751c)'
+    azureSubscription: 'cfcdfd0b-26ef-46eb-bef5-38aa34de648c'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -56,7 +56,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'Azure for Students (c4b8ac58-e4e0-438d-a04e-30604e28751c)'
+    backendServiceArm: 'cfcdfd0b-26ef-46eb-bef5-38aa34de648c'
     backendAzureRmResourceGroupName: '$(TerraformBackend.ResourceGroup)'
     backendAzureRmStorageAccountName: '$(TerraformBackend.StorageAccount)'
     backendAzureRmContainerName: 'stage'
@@ -67,10 +67,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    backendServiceArm: 'Azure for Students (c4b8ac58-e4e0-438d-a04e-30604e28751c)'
+    backendServiceArm: 'cfcdfd0b-26ef-46eb-bef5-38aa34de648c'
     backendAzureRmResourceGroupName: '$(TerraformBackend.ResourceGroup)'
     backendAzureRmStorageAccountName: '$(TerraformBackend.StorageAccount)'
-    environmentServiceNameAzureRM: 'Azure for Students (c4b8ac58-e4e0-438d-a04e-30604e28751c)'
+    environmentServiceNameAzureRM: 'cfcdfd0b-26ef-46eb-bef5-38aa34de648c'
     backendAzureRmContainerName: 'stage'
     backendAzureRmKey: 'tf/terraform.tfstate'
     workingDirectory: 'D:\a\1\s\drop\Terraform\'
@@ -79,10 +79,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    backendServiceArm: 'Azure for Students (c4b8ac58-e4e0-438d-a04e-30604e28751c)'
+    backendServiceArm: 'cfcdfd0b-26ef-46eb-bef5-38aa34de648c'
     backendAzureRmResourceGroupName: '$(TerraformBackend.ResourceGroup)'
     backendAzureRmStorageAccountName: '$(TerraformBackend.StorageAccount)'
-    environmentServiceNameAzureRM: 'Azure for Students (c4b8ac58-e4e0-438d-a04e-30604e28751c)'
+    environmentServiceNameAzureRM: 'cfcdfd0b-26ef-46eb-bef5-38aa34de648c'
     backendAzureRmContainerName: 'stage'
     backendAzureRmKey: 'tf/terraform.tfstate'
     workingDirectory: 'D:\a\1\s\drop\Terraform\'
